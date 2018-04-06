@@ -76,7 +76,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)libraries\glfw\include\GLFW;$(SolutionDir)libraries\glew\include\GL;$(SolutionDir)libraries\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)libraries\glew\lib\Release\Win32;$(SolutionDir)libraries\glfw\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +121,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Blocks\Block.cpp" />
+    <ClCompile Include="Core\Camera\Camera.cpp" />
+    <ClCompile Include="Core\Display.cpp" />
+    <ClCompile Include="Core\EngineCore.cpp" />
+    <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Loaders\ObjLoader.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Shaders\Phong\PhongShader.cpp" />
+    <ClCompile Include="Shaders\Shader.cpp" />
+    <ClCompile Include="Graphics\Skybox\Skybox.cpp" />
+    <ClCompile Include="Graphics\Textures\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blocks\Block.h" />
+    <ClInclude Include="Core\Camera\Camera.h" />
+    <ClInclude Include="Core\Display.h" />
+    <ClInclude Include="Core\EngineCore.h" />
+    <ClInclude Include="Core\Settings.h" />
+    <ClInclude Include="Loaders\ObjLoader.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Shaders\Phong\PhongShader.h" />
+    <ClInclude Include="Shaders\Shader.h" />
+    <ClInclude Include="Graphics\Skybox\Skybox.h" />
+    <ClInclude Include="Graphics\Textures\Texture.h" />
+    <ClInclude Include="Utils\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Phong\phong.fs" />
+    <None Include="Shaders\Phong\phong.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\dirt.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
