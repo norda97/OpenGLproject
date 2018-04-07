@@ -4,8 +4,17 @@
 
 EngineCore::EngineCore()
 	:	display(WINDOW_WIDTH, WINDOW_HEIGHT),
-		shader("phong.vs", "phong.fs"),
-		test("scout.png")
+		test("scout.png"),
+		skyBox(std::vector<std::string>
+			{
+			"./Resources/skybox/right.jpg",
+			"./Resources/skybox/left.jpg",
+			"./Resources/skybox/top.jpg",
+			"./Resources/skybox/bottom.jpg",
+			"./Resources/skybox/front.jpg",
+			"./Resources/skybox/back.jpg"
+			}
+			)
 {
 	timeCounter = fps = 0;
 }
@@ -17,11 +26,6 @@ EngineCore::~EngineCore()
 
 void EngineCore::init()
 {
-	
-	this->test.loadGPU(this->shader.getID());
-
-
-
 	double t, oldt(0), dt(0);
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(display.getWindow()) && !glfwGetKey(display.getWindow(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -59,13 +63,12 @@ void EngineCore::update(const double& dt)
 
 void EngineCore::render()
 {
-	this->shader.updateUniforms(glm::mat4(1.0f), this->cam.getView(), this->cam.getProj());
-	this->shader.useProgram();
 	/* Render here */
 	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	this->test.render();
+	this->skyBox.render(this->cam);
+	this->test.render(this->cam);
 
 	/* Swap front and back buffers */
 	glfwSwapBuffers(display.getWindow());

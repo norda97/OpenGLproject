@@ -126,12 +126,14 @@
     <ClCompile Include="Core\Display.cpp" />
     <ClCompile Include="Core\EngineCore.cpp" />
     <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Graphics\Textures\CubeMap.cpp" />
     <ClCompile Include="Loaders\ObjLoader.cpp" />
-    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Graphics\Mesh.cpp" />
     <ClCompile Include="Shaders\Phong\PhongShader.cpp" />
     <ClCompile Include="Shaders\Shader.cpp" />
     <ClCompile Include="Graphics\Skybox\Skybox.cpp" />
     <ClCompile Include="Graphics\Textures\Texture.cpp" />
+    <ClCompile Include="Shaders\SkyBox\SkyBoxShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Blocks\Block.h" />
@@ -139,20 +141,30 @@
     <ClInclude Include="Core\Display.h" />
     <ClInclude Include="Core\EngineCore.h" />
     <ClInclude Include="Core\Settings.h" />
+    <ClInclude Include="Graphics\Textures\CubeMap.h" />
     <ClInclude Include="Loaders\ObjLoader.h" />
-    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Graphics\Mesh.h" />
     <ClInclude Include="Shaders\Phong\PhongShader.h" />
     <ClInclude Include="Shaders\Shader.h" />
     <ClInclude Include="Graphics\Skybox\Skybox.h" />
     <ClInclude Include="Graphics\Textures\Texture.h" />
+    <ClInclude Include="Shaders\SkyBox\SkyBoxShader.h" />
     <ClInclude Include="Utils\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Phong\phong.fs" />
     <None Include="Shaders\Phong\phong.vs" />
+    <None Include="Shaders\SkyBox\skybox.fs" />
+    <None Include="Shaders\SkyBox\skybox.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\dirt.png" />
+    <Image Include="Resources\skybox\back.jpg" />
+    <Image Include="Resources\skybox\bottom.jpg" />
+    <Image Include="Resources\skybox\front.jpg" />
+    <Image Include="Resources\skybox\left.jpg" />
+    <Image Include="Resources\skybox\right.jpg" />
+    <Image Include="Resources\skybox\top.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

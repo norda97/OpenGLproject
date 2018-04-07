@@ -1,6 +1,6 @@
 #include "Mesh.h"
 
-#include "Loaders\ObjLoader.h"
+#include "..\Loaders\ObjLoader.h"
 #include "glew.h"
 
 Mesh::Mesh(const std::string & path)
@@ -11,12 +11,16 @@ Mesh::Mesh(const std::string & path)
 
 Mesh::~Mesh()
 {
+	glDeleteVertexArrays(1, &this->vao);
+	glDeleteBuffers(1, &this->vbo);
+	glDeleteBuffers(1, &this->ebo);
 }
 
 void Mesh::render()
 {
 	glBindVertexArray(this->vao);
 	glDrawArrays(GL_TRIANGLES, 0, this->vertices.size());
+	glBindVertexArray(0);
 }
 
 void Mesh::loadGPU(const  GLuint & shaderID)

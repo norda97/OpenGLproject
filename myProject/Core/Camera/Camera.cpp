@@ -68,12 +68,12 @@ void Camera::update(const double & dt)
 	this->cameraSpeed = 2.5f * (float)dt;
 }
 
-const glm::mat4 & Camera::getView()
+const glm::mat4 & Camera::getView() const
 {
 	return this->viewMatrix;
 }
 
-const glm::mat4 & Camera::getProj()
+const glm::mat4 & Camera::getProj() const
 {
 	return this->projMatrix;
 }

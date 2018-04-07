@@ -45,5 +45,4 @@ void Texture::loadTexture(const unsigned & target)
 {	
 	glActiveTexture(GL_TEXTURE0 + target);
 	glBindTexture(GL_TEXTURE_2D, this->textureID);
-	glUniform1i(this->textureID, target);
 }

@@ -5,19 +5,19 @@
 
 #include "glm.hpp"
 #include "../Display.h"
-#include "../../Shaders/Shader.h"
+
 
 class Camera
 {
 public:
-	Camera(const glm::vec3 & position = glm::vec3(0.0f, 0.0f, -10.0f));
+	Camera(const glm::vec3 & position = glm::vec3(0.0f, 0.0f, 10.0f));
 	~Camera();
 
 	void input(Display * display);
 	void update(const double& dt);
 
-	const glm::mat4 & getView();
-	const glm::mat4 & getProj();
+	const glm::mat4 & getView() const;
+	const glm::mat4 & getProj() const;
 
 private:
 	void updateView();

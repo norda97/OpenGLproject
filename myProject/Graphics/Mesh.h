@@ -5,8 +5,8 @@
 
 #include <vector>
 #include "glm.hpp"
-#include "Shaders\Shader.h"
-#include "Loaders\ObjLoader.h"
+#include "..\Shaders\Shader.h"
+#include "..\Loaders\ObjLoader.h"
 
 
 class Mesh

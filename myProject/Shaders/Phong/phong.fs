@@ -11,7 +11,7 @@ out vec4 fragmentColor;
 void main()                                         
 {  
     //diffuse
-    float diffuse = max(dot(vec3(0.0f, 0.0f, -1.0f), normalize(fragNormal)), 0.0);     
+    float diffuse = max(dot(normalize(vec3(-10.0f, 10.0f, -10.0f)), normalize(fragNormal)), 0.0);     
     
     vec3 ambient = vec3(0.2f, 0.2f, 0.2f);    
     vec3 albedo = texture(tex, fragUV).xyz;

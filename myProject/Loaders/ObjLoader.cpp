@@ -11,7 +11,7 @@ bool loadOBJ(const std::string & path, std::vector<vertexStruct> & verticies)
 
 	FILE * file = fopen(path.c_str(), "r");
 	if (file == NULL) {
-		printf("Impossible to open the file !\n");
+		printf("Impossible to open the .obj file !\n");
 		return false;
 	}
 

@@ -1,7 +1,7 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#define PATH "./Shaders/Phong/"
+#define PATH "./Shaders/"
 
 #include <string>
 #include "glm.hpp"

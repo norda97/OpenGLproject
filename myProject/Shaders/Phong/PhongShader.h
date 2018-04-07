@@ -7,7 +7,7 @@
 class PhongShader : public Shader
 {
 public:
-	PhongShader(const std::string& vertexFile, const std::string& fragmentFile);
+	PhongShader();
 	~PhongShader();
 
 	void updateUniforms(const glm::mat4& worldMatrix, const glm::mat4& viewMatrix, const glm::mat4& projectionMatrix);

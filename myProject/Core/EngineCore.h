@@ -7,9 +7,9 @@
 #include "Display.h"
 
 //Temporary includes
-#include "..\Shaders\Phong\PhongShader.h"
 #include "..\Blocks\Block.h"
 #include "Camera\Camera.h"
+#include "..\Graphics\Skybox\Skybox.h"
 
 class EngineCore
 {
@@ -33,10 +33,8 @@ private:
 
 
 	//Creating things
-	PhongShader shader;
 	Camera cam;
-
-
+	Skybox skyBox;
 	Block test;
 
 
