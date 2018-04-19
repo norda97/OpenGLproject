@@ -4,7 +4,7 @@
 
 #include "glm.hpp"
 #include "glew.h"
-#include "..\Graphics\Mesh.h"
+#include "..\Graphics\Model\Mesh.h"
 #include "..\Shaders\Phong\PhongShader.h"
 #include "..\Core\Camera\Camera.h"
 

@@ -1,11 +1,9 @@
 #include "Mesh.h"
 
-#include "..\Loaders\ObjLoader.h"
 #include "glew.h"
 
-Mesh::Mesh(const std::string & path)
+Mesh::Mesh()
 {
-	loadOBJ(path, vertices);
 
 }
 
@@ -51,4 +49,14 @@ void Mesh::loadGPU(const  GLuint & shaderID)
 	glBindVertexArray(0);
 
 	glUseProgram(0);
+}
+
+void Mesh::addVertex(vertexStruct vertex)
+{
+	vertices.push_back(vertex);
+}
+
+void Mesh::setMaterial(const Material & mat)
+{
+	this->material = mat;
 }

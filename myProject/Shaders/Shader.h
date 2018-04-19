@@ -8,7 +8,6 @@
 #include "glew.h"
 
 class Shader {
-
 public:
 	Shader(const std::string& vertexFile, const std::string& fragmentFile);
 	virtual ~Shader();

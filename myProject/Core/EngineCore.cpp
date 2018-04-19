@@ -4,7 +4,6 @@
 
 EngineCore::EngineCore()
 	:	display(WINDOW_WIDTH, WINDOW_HEIGHT),
-		test("scout.png"),
 		skyBox(std::vector<std::string>
 			{
 			"./Resources/skybox/right.jpg",
@@ -26,6 +25,8 @@ EngineCore::~EngineCore()
 
 void EngineCore::init()
 {
+	renderer.setShader(Renderer::Shaders::phong, this->entityManager.getEntities());
+
 	double t, oldt(0), dt(0);
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(display.getWindow()) && !glfwGetKey(display.getWindow(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -58,7 +59,6 @@ void EngineCore::init()
 void EngineCore::update(const double& dt)
 {
 	this->cam.update(dt);
-	
 }
 
 void EngineCore::render()
@@ -68,7 +68,7 @@ void EngineCore::render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	this->skyBox.render(this->cam);
-	this->test.render(this->cam);
+	this->renderer.render(Renderer::Shaders::phong, this->entityManager.getEntities(), cam);
 
 	/* Swap front and back buffers */
 	glfwSwapBuffers(display.getWindow());

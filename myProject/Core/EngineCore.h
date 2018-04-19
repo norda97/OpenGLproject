@@ -7,9 +7,11 @@
 #include "Display.h"
 
 //Temporary includes
-#include "..\Blocks\Block.h"
+#include "..\Core\Entity\Entity.h"
 #include "Camera\Camera.h"
 #include "..\Graphics\Skybox\Skybox.h"
+#include "..\Core\Entity\EntityManager.h"
+#include "Renderer.h"
 
 class EngineCore
 {
@@ -35,8 +37,8 @@ private:
 	//Creating things
 	Camera cam;
 	Skybox skyBox;
-	Block test;
-
+	EntityManager entityManager;
+	Renderer renderer;
 
 };
 

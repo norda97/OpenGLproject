@@ -10,11 +10,7 @@ public:
 	PhongShader();
 	~PhongShader();
 
-	void updateUniforms(const glm::mat4& worldMatrix, const glm::mat4& viewMatrix, const glm::mat4& projectionMatrix);
-
-	void setCamera(Camera * cam);
-private:
-	Camera * cam;
+	void updateUniforms(const glm::mat4& worldMatrix);
 };
 
 #endif
