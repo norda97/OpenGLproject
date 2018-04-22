@@ -1,5 +1,5 @@
 #include "Renderer.h"
-#include "..\Shaders\Shader.h"
+#include "..\..\Shaders\Shader.h"
 
 
 Renderer::Renderer()
@@ -27,9 +27,10 @@ void Renderer::render(Shaders shader, const std::vector<Entity*>& entities, cons
 {
 	if (shader == Shaders::phong)
 	{
+		phongShader.updateUniforms(entities[0]->getWorldMatrix(), cam.getProj() * cam.getView());
+		phongShader.loadVector3(5, cam.getPosition());
 		phongShader.useProgram();
 
-		phongShader.loadMatrix4(4, cam.getProj() * cam.getView());
 
 		for (int i = 0; i < entities.size(); i++)
 		{

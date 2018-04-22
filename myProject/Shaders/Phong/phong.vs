@@ -9,7 +9,7 @@ out vec3 fragNormal;
 out vec2 fragUV;
 
 layout (location = 3) uniform mat4 worldMatrix;                           
-layout (location = 4) uniform mat4  viewProjMatrix;   
+layout (location = 4) uniform mat4  projViewMatrix;   
                                                              
 
 void main()   
@@ -17,5 +17,5 @@ void main()
     fragPos = (worldMatrix * vec4(vertexPosition, 1.0)).xyz;
     fragNormal = (worldMatrix * vec4(vertexNormal, 1.0)).xyz;
     fragUV = vertexUV;
-    gl_Position = viewProjMatrix * vec4(fragPos, 1.0); 
+    gl_Position = projViewMatrix * vec4(fragPos, 1.0); 
 }                                                   

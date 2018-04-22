@@ -1,10 +1,9 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include "Entity\Entity.h"
-#include "..\Core\Camera\Camera.h"
-#include "..\Shaders\Phong\PhongShader.h"
-
+#include "..\Entity\Entity.h"
+#include "..\..\Core\Camera\Camera.h"
+#include "..\..\Shaders\Phong\PhongShader.h"
 class Renderer
 {
 public:
@@ -17,6 +16,7 @@ public:
 
 private:
 	PhongShader phongShader;
+	
 };
 
 #endif

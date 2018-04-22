@@ -18,6 +18,7 @@ public:
 
 	const glm::mat4 & getView() const;
 	const glm::mat4 & getProj() const;
+	const glm::vec3 & getPosition() const;
 
 private:
 	void updateView();

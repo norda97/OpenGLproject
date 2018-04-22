@@ -133,12 +133,13 @@
     <ClCompile Include="Graphics\Model\Mesh.cpp" />
     <ClCompile Include="Graphics\Model\Model.cpp" />
     <ClCompile Include="Graphics\Model\Material.cpp" />
-    <ClCompile Include="Core\Renderer.cpp" />
+    <ClCompile Include="Core\Renderer\Renderer.cpp" />
     <ClCompile Include="Shaders\Phong\PhongShader.cpp" />
     <ClCompile Include="Shaders\Shader.cpp" />
     <ClCompile Include="Graphics\Skybox\Skybox.cpp" />
     <ClCompile Include="Graphics\Textures\Texture.cpp" />
     <ClCompile Include="Shaders\SkyBox\SkyBoxShader.cpp" />
+    <ClCompile Include="Core\Renderer\UniformBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Blocks\Block.h" />
@@ -153,12 +154,13 @@
     <ClInclude Include="Graphics\Model\Mesh.h" />
     <ClInclude Include="Graphics\Model\Model.h" />
     <ClInclude Include="Graphics\Model\Material.h" />
-    <ClInclude Include="Core\Renderer.h" />
+    <ClInclude Include="Core\Renderer\Renderer.h" />
     <ClInclude Include="Shaders\Phong\PhongShader.h" />
     <ClInclude Include="Shaders\Shader.h" />
     <ClInclude Include="Graphics\Skybox\Skybox.h" />
     <ClInclude Include="Graphics\Textures\Texture.h" />
     <ClInclude Include="Shaders\SkyBox\SkyBoxShader.h" />
+    <ClInclude Include="Core\Renderer\UniformBuffer.h" />
     <ClInclude Include="Utils\stb_image.h" />
   </ItemGroup>
   <ItemGroup>

@@ -11,38 +11,50 @@ EntityManager::EntityManager()
 
 EntityManager::~EntityManager()
 {
-	for (int i = 0; i < this->entities.size(); i++)
-	{
-		delete this->entities[i];
-	}
+	for (const auto& pair : this->entities)
+		delete pair.second;
 
 	for (const auto& pair : modelMap)
-	{
-		if(modelMap.size() != 0)
-		{ 
-			delete pair.second;
-			modelMap.erase(pair.first);
-		}
-	}
+		delete pair.second;
 }
 
-void EntityManager::addModel(const std::string & path, const std::string& keyName)
+bool EntityManager::addModel(const std::string & path, const std::string& keyName)
 {
-	this->modelMap.insert(std::make_pair(keyName ,loadOBJ(path)));
+	bool foundName = false;
+
+	if (this->modelMap.find(keyName) == this->modelMap.end()) 
+		this->modelMap.insert(std::make_pair(keyName, loadOBJ(path)));
+	else
+		foundName = true;
+
+	return foundName;
 }
 
-bool EntityManager::addEntity(const std::string & modelName)
+bool EntityManager::addEntity(const std::string& entityName, const std::string& modelName)
 {
-	bool foundName;
+	bool foundName = false;
+
 	
-	this->entities.push_back(new Entity(this->modelMap[modelName]));
+	if (this->entities.find(entityName) == this->entities.end()) 
+		this->entities.insert(std::make_pair(entityName, new Entity(this->modelMap[modelName])));
+	else 
+		foundName = true;
 
-	return false;
+	return foundName;
 }
 
-const std::vector<Entity*>& EntityManager::getEntities()
+Entity * EntityManager::getEntity(const std::string & entityName)
 {
-	return this->entities;
+	return this->entities[entityName];
+}
+
+const std::vector<Entity*> EntityManager::getEntities()
+{
+	std::vector<Entity*> allEntities;
+	for (const auto& pair : this->entities)
+		allEntities.push_back(pair.second);
+
+	return allEntities;
 }
 
 

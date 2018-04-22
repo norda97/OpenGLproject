@@ -78,6 +78,11 @@ const glm::mat4 & Camera::getProj() const
 	return this->projMatrix;
 }
 
+const glm::vec3 & Camera::getPosition() const
+{
+	return this->position;
+}
+
 void Camera::updateView()
 {
 	this->viewMatrix = glm::lookAt(this->position, this->position + this->forward, GLOBAL_UP);

@@ -8,6 +8,7 @@
 #include "glm.hpp"
 #include "..\..\Shaders\Shader.h"
 #include "Material.h"
+#include "..\..\Core\Renderer\UniformBuffer.h"
 
 
 struct vertexStruct
@@ -27,8 +28,10 @@ public:
 	void loadGPU(const GLuint & shaderID);
 	void addVertex(vertexStruct vertex);
 	void setMaterial(const Material & mat);
+	void updateMaterial();
 private:
 	GLuint vao, vbo, ebo;
+	static UniformBuffer* ubo;
 	std::vector<vertexStruct> vertices;
 	Material material;
 };

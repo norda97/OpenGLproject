@@ -25,6 +25,10 @@ EngineCore::~EngineCore()
 
 void EngineCore::init()
 {
+	this->entityManager.addModel("./Resources/Mesh/Sphere/sphere.obj", "sphere");
+	this->entityManager.addEntity("sphere", "sphere");
+	this->entityManager.getEntity("sphere")->setPosition(glm::vec3(20.0f, 2.0f, 0.0f));
+
 	renderer.setShader(Renderer::Shaders::phong, this->entityManager.getEntities());
 
 	double t, oldt(0), dt(0);

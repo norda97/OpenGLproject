@@ -22,7 +22,12 @@ void Entity::loadOBJ(const GLuint & shaderID)
 	this->model->loadGPU(shaderID);
 }
 
-const glm::mat4 & Entity::getWorldMatrix()
+void Entity::setPosition(const glm::vec3 & position)
+{
+	this->position = position;
+}
+
+const glm::mat4 Entity::getWorldMatrix()
 {
 	return glm::translate(glm::mat4(1.0f), position);
 }

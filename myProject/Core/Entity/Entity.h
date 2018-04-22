@@ -12,7 +12,10 @@ public:
 
 	void render();
 	void loadOBJ(const GLuint & shaderID);
-	const glm::mat4& getWorldMatrix();
+
+	void setPosition(const glm::vec3& position);
+
+	const glm::mat4 getWorldMatrix();
 private:
 	glm::vec3 position;
 	Model* model;

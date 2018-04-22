@@ -17,8 +17,11 @@ public:
 
 
 private:
-	glm::vec3 Ka, Kd, Ks;
-	float Ns, d;
+	glm::vec3 Ka;
+	float Ns;
+	glm::vec3 Kd;
+	float d;
+	glm::vec3 Ks;
 };
 
 #endif

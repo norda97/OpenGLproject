@@ -11,7 +11,7 @@
 #include "Camera\Camera.h"
 #include "..\Graphics\Skybox\Skybox.h"
 #include "..\Core\Entity\EntityManager.h"
-#include "Renderer.h"
+#include "Renderer\Renderer.h"
 
 class EngineCore
 {

@@ -43,10 +43,6 @@ void Skybox::render(const Camera & cam)
 	this->shader.useProgram();
 
 	this->loadCubeMapTexture();
-	/*glBindVertexArray(this->vao);
-	glDrawArrays(GL_TRIANGLES, 0, 36);
-	glBindVertexArray(0);*/
-
 	glBindVertexArray(this->vao);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->ebo);
 	glDrawElements(GL_TRIANGLES, sizeof(this->indicies) / sizeof(GLuint), GL_UNSIGNED_INT, 0);

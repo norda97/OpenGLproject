@@ -2,9 +2,11 @@
 
 #include "glew.h"
 
+UniformBuffer* Mesh::ubo = nullptr;
+
 Mesh::Mesh()
 {
-
+	
 }
 
 Mesh::~Mesh()
@@ -12,6 +14,12 @@ Mesh::~Mesh()
 	glDeleteVertexArrays(1, &this->vao);
 	glDeleteBuffers(1, &this->vbo);
 	glDeleteBuffers(1, &this->ebo);
+	
+	if (ubo != nullptr)
+	{
+		delete ubo;
+		ubo = nullptr;
+	}
 }
 
 void Mesh::render()
@@ -24,6 +32,12 @@ void Mesh::render()
 void Mesh::loadGPU(const  GLuint & shaderID)
 {
 	glUseProgram(shaderID);
+
+	if (ubo == nullptr)
+	{
+		ubo = new UniformBuffer("material", shaderID, 0);
+		ubo->setData(&this->material, sizeof(material));
+	}
 
 	glGenVertexArrays(1, &this->vao);
 	glBindVertexArray(this->vao);
@@ -59,4 +73,12 @@ void Mesh::addVertex(vertexStruct vertex)
 void Mesh::setMaterial(const Material & mat)
 {
 	this->material = mat;
+}
+
+void Mesh::updateMaterial()
+{
+	if (ubo != nullptr)
+	{
+		ubo->setSubData(&this->material, sizeof(material), 0);
+	}
 }

@@ -11,14 +11,15 @@ public:
 	EntityManager();
 	~EntityManager();
 
-	void addModel(const std::string& path, const std::string& keyName = "default");
-	bool addEntity(const std::string& modelName = "default");
+	bool addModel(const std::string& path, const std::string& keyName = "default");
+	bool addEntity(const std::string& entityName = "default", const std::string& modelName = "default");
 
-	const std::vector<Entity*> & getEntities();
+	Entity* getEntity(const std::string& entityName);
+	const std::vector<Entity*> getEntities();
 
 private:
 	std::map< std::string, Model*> modelMap;
-	std::vector<Entity*> entities;
+	std::map< std::string, Entity*> entities;
 };
 
 #endif

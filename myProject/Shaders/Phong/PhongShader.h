@@ -10,7 +10,7 @@ public:
 	PhongShader();
 	~PhongShader();
 
-	void updateUniforms(const glm::mat4& worldMatrix);
+	void updateUniforms(const glm::mat4& worldMatrix, const glm::mat4& projViewMatrix);
 };
 
 #endif
