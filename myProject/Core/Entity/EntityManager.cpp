@@ -57,4 +57,13 @@ const std::vector<Entity*> EntityManager::getEntities()
 	return allEntities;
 }
 
+const std::vector<std::string> EntityManager::getAllEntityNames()
+{
+	std::vector<std::string> allNames;
+	for (const auto& pair : this->entities)
+		allNames.push_back(pair.first);
+
+	return allNames;
+}
+
 

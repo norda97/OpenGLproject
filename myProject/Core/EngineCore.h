@@ -12,6 +12,7 @@
 #include "..\Graphics\Skybox\Skybox.h"
 #include "..\Core\Entity\EntityManager.h"
 #include "Renderer\Renderer.h"
+#include "..\Utils\GUI.h"
 
 class EngineCore
 {
@@ -29,12 +30,13 @@ private:
 	Display display;
 
 	//##### For FPS counter ######
-	int fps;
+	unsigned fps;
 	double timeCounter;
 	//############################
 
 
 	//Creating things
+	GUI mGUI;
 	Camera cam;
 	Skybox skyBox;
 	EntityManager entityManager;

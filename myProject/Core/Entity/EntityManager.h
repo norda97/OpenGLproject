@@ -16,6 +16,7 @@ public:
 
 	Entity* getEntity(const std::string& entityName);
 	const std::vector<Entity*> getEntities();
+	const std::vector<std::string> getAllEntityNames();
 
 private:
 	std::map< std::string, Model*> modelMap;

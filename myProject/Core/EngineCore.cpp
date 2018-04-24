@@ -1,9 +1,9 @@
 #include "EngineCore.h"
 #include <iostream>
 
-
 EngineCore::EngineCore()
 	:	display(WINDOW_WIDTH, WINDOW_HEIGHT),
+		mGUI(&this->display, &entityManager),
 		skyBox(std::vector<std::string>
 			{
 			"./Resources/skybox/right.jpg",
@@ -21,6 +21,7 @@ EngineCore::EngineCore()
 
 EngineCore::~EngineCore()
 {
+	
 }
 
 void EngineCore::init()
@@ -30,7 +31,8 @@ void EngineCore::init()
 	this->entityManager.getEntity("sphere")->setPosition(glm::vec3(20.0f, 2.0f, 0.0f));
 
 	renderer.setShader(Renderer::Shaders::phong, this->entityManager.getEntities());
-
+	
+	
 	double t, oldt(0), dt(0);
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(display.getWindow()) && !glfwGetKey(display.getWindow(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -40,16 +42,6 @@ void EngineCore::init()
 		dt = t - oldt;
 		oldt = t;
 		// ############################################
-
-		// ############## FPS counter in console #################
-		this->timeCounter += dt;
-		this->fps++;
-		if (timeCounter >= 1)
-		{
-			std::cout << fps << std::endl;
-			fps = timeCounter = 0;
-		}
-		// #######################################################
 
 		this->input();
 		this->update(dt);
@@ -73,6 +65,9 @@ void EngineCore::render()
 
 	this->skyBox.render(this->cam);
 	this->renderer.render(Renderer::Shaders::phong, this->entityManager.getEntities(), cam);
+
+	//render GUI
+	this->mGUI.render();
 
 	/* Swap front and back buffers */
 	glfwSwapBuffers(display.getWindow());

@@ -14,6 +14,7 @@ public:
 	void loadOBJ(const GLuint & shaderID);
 
 	void setPosition(const glm::vec3& position);
+	glm::vec3& getPosition();
 
 	const glm::mat4 getWorldMatrix();
 private:
