@@ -11,8 +11,8 @@ public:
 	EntityManager();
 	~EntityManager();
 
-	bool addModel(const std::string& path, const std::string& keyName = "default");
-	bool addEntity(const std::string& entityName = "default", const std::string& modelName = "default");
+	bool addModel(const std::string& path, const std::string& keyName = "Model");
+	bool addEntity(const std::string& entityName = "Entity", const std::string& modelName = "Model");
 
 	Entity* getEntity(const std::string& entityName);
 	const std::vector<Entity*> getEntities();

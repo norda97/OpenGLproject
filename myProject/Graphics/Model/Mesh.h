@@ -9,7 +9,7 @@
 #include "..\..\Shaders\Shader.h"
 #include "Material.h"
 #include "..\..\Core\Renderer\UniformBuffer.h"
-
+#include "..\Textures\Texture.h"
 
 struct vertexStruct
 {
@@ -28,12 +28,14 @@ public:
 	void loadGPU(const GLuint & shaderID);
 	void addVertex(vertexStruct vertex);
 	void setMaterial(const Material & mat);
+	void setTexture(const std::string & path, const bool & useMIPMAP = true);
 	void updateMaterial();
 private:
 	GLuint vao, vbo, ebo;
 	static UniformBuffer* ubo;
 	std::vector<vertexStruct> vertices;
 	Material material;
+	Texture texture;
 };
 
 #endif

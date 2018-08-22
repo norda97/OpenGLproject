@@ -15,7 +15,7 @@ layout (location = 4) uniform mat4  projViewMatrix;
 void main()   
 {                
     fragPos = (worldMatrix * vec4(vertexPosition, 1.0)).xyz;
-    fragNormal = (worldMatrix * vec4(vertexNormal, 1.0)).xyz;
+    fragNormal = (worldMatrix * vec4(vertexNormal, 0.0)).xyz;
     fragUV = vertexUV;
     gl_Position = projViewMatrix * vec4(fragPos, 1.0); 
 }                                                   

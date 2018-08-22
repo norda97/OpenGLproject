@@ -1,11 +1,12 @@
 #include "Display.h"
 
-#include<iostream>
+#include <iostream>
+#include "Settings.h"
 
-Display::Display(const unsigned& width, const unsigned& height)
+Display::Display()
 {
-	this->width = width;
-	this->height = height;
+	this->width = WINDOW_WIDTH;
+	this->height = WINDOW_HEIGHT;
 
 	this->init();
 }
@@ -82,6 +83,17 @@ unsigned Display::getHeight() const
 {
 	return this->height;
 }
+
+unsigned Display::setWidth() const
+{
+	return this->width;
+}
+
+unsigned Display::setHeight() const
+{
+	return this->height;
+}
+
 
 void Display::centerMouse() const
 {

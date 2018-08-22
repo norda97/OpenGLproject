@@ -13,12 +13,12 @@ public:
 	Model();
 	~Model();
 
-	void addMesh(const Mesh & mesh);
+	void addMesh(Mesh * mesh);
 	void render();
 
 	void loadGPU(const GLuint & shaderID);
 private:
-	std::vector<Mesh> meshes;
+	std::vector<Mesh*> meshes;
 };
 
 #endif

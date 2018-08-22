@@ -128,7 +128,12 @@
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Core\Entity\Entity.cpp" />
     <ClCompile Include="Core\Entity\EntityManager.cpp" />
+    <ClCompile Include="Core\Renderer\FrameBuffer.cpp" />
     <ClCompile Include="Graphics\Textures\CubeMap.cpp" />
+    <ClCompile Include="Graphics\Particles\ParticleEmitter.cpp" />
+    <ClCompile Include="Graphics\Particles\Particle.cpp" />
+    <ClCompile Include="Core\Renderer\ParticleRenderer.cpp" />
+    <ClCompile Include="Shaders\ParticleShader\ParticleShader.cpp" />
     <ClCompile Include="Utils\GUI.cpp" />
     <ClCompile Include="Loaders\ObjLoader.cpp" />
     <ClCompile Include="Graphics\Model\Mesh.cpp" />
@@ -154,7 +159,12 @@
     <ClInclude Include="Core\Settings.h" />
     <ClInclude Include="Core\Entity\Entity.h" />
     <ClInclude Include="Core\Entity\EntityManager.h" />
+    <ClInclude Include="Core\Renderer\FrameBuffer.h" />
     <ClInclude Include="Graphics\Textures\CubeMap.h" />
+    <ClInclude Include="Graphics\Particles\ParticleEmitter.h" />
+    <ClInclude Include="Graphics\Particles\Particle.h" />
+    <ClInclude Include="Core\Renderer\ParticleRenderer.h" />
+    <ClInclude Include="Shaders\ParticleShader\ParticleShader.h" />
     <ClInclude Include="Utils\GUI.h" />
     <ClInclude Include="Loaders\ObjLoader.h" />
     <ClInclude Include="Graphics\Model\Mesh.h" />
@@ -177,6 +187,8 @@
     <ClInclude Include="Utils\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\ParticleShader\particle.fs" />
+    <None Include="Shaders\ParticleShader\particle.vs" />
     <None Include="Shaders\Phong\phong.fs" />
     <None Include="Shaders\Phong\phong.vs" />
     <None Include="Shaders\SkyBox\skybox.fs" />

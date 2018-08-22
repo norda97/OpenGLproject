@@ -7,17 +7,21 @@
 #include <string>
 
 
+
 class Texture
 {
 public:
-	Texture(const std::string & path, const bool & useMIPMAP);
+	Texture(const std::string & path = "defaultTex.png", const bool & useMIPMAP = false);
+	Texture& operator=(const Texture& other);
+
 	~Texture();
-
-	void loadTexture(const unsigned & target);
-
+	const unsigned& getTextureID();
+	void setTexture(const std::string & path, const bool & useMIPMAP = false);
+	void loadTexture(const unsigned & target) const;
 private:
 	int width, height, nrChannels;
 	unsigned textureID;
+	bool usedSTBI;
 
 	unsigned char *data;
 };

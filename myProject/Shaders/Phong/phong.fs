@@ -6,6 +6,7 @@ in vec2 fragUV;
 
 uniform sampler2D tex;
 layout (location = 5) uniform vec3 camPos;   
+layout (location = 6) uniform vec3 lightPos; 
 
 layout (std140) uniform material
 { 
@@ -18,12 +19,22 @@ out vec4 fragmentColor;
                                                     
 void main()                                         
 {  
-    //diffuse
-    float diffuse = max(dot(normalize(vec3(-10.0f, 6.0f, -10.0f) - fragPos), normalize(fragNormal)), 0.0);     
-    float camDir = length(fragPos - camPos);
-    vec3 ambient = vec3(1.0f, 0.2f, 0.2f);    
     vec3 albedo = texture(tex, fragUV).xyz;
 
-    fragmentColor = vec4(Kd_d.rgb * diffuse, 1.0f);     
-    //fragmentColor = vec4(albedo * ambient + albedo * diffuse, 1.0f);               
+    //Ambient
+    vec3 ambient = Ka_Ns.rgb * albedo;
+
+    //diffuse
+    vec3 lightDir = normalize(lightPos - fragPos);
+    vec3 normal = normalize(fragNormal);
+    float diff = max(dot(lightDir, normal), 0.0);     
+    vec3 diffuse = Kd_d.rgb * albedo * diff;
+
+    //specular
+    vec3 viewDir = normalize(camPos - fragPos);
+    vec3 reflectDir = reflect(-viewDir, normal);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), Ka_Ns.w);
+    vec3 specular = spec * Ks.rgb * diff;
+
+    fragmentColor = vec4(diffuse + ambient + specular, 1.0f);                 
 }                                                   

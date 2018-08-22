@@ -87,6 +87,21 @@
     <ClCompile Include="Utils\GUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Renderer\FrameBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Particles\ParticleEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Particles\Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\ParticleShader\ParticleShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Renderer\ParticleRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utils\stb_image.h">
@@ -173,12 +188,29 @@
     <ClInclude Include="Utils\GUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Renderer\FrameBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Particles\ParticleEmitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Particles\Particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\ParticleShader\ParticleShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Renderer\ParticleRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Phong\phong.fs" />
     <None Include="Shaders\Phong\phong.vs" />
     <None Include="Shaders\SkyBox\skybox.fs" />
     <None Include="Shaders\SkyBox\skybox.vs" />
+    <None Include="Shaders\ParticleShader\particle.vs" />
+    <None Include="Shaders\ParticleShader\particle.fs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\dirt.png">

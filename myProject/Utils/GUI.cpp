@@ -3,8 +3,9 @@
 #include "..\Core\Display.h"
 #include "..\Core\Entity\EntityManager.h"
 #include <string>
+#include "..\Core\Display.h"
 
-GUI::GUI(Display * display, EntityManager * entities)
+GUI::GUI(EntityManager * entities)
 {
 	this->mEntities = entities;
 
@@ -17,7 +18,7 @@ GUI::GUI(Display * display, EntityManager * entities)
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
 	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;  // Enable Keyboard Controls
 	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;   // Enable Gamepad Controls
-	ImGui_ImplGlfwGL3_Init(display->getWindow(), true);
+	ImGui_ImplGlfwGL3_Init(Display::getInstance().getWindow(), true);
 	ImGui::StyleColorsDark();
 	//###############################################
 }
@@ -31,9 +32,10 @@ GUI::~GUI()
 
 void GUI::render()
 {
+
 	// IMGUI new frame
 	ImGui_ImplGlfwGL3_NewFrame();
-
+	
 	// ############# Test Window #################
 	static float f = 0.0f;
 	static int counter = 0;
@@ -41,45 +43,34 @@ void GUI::render()
 	ImGui::Text("Console:");
 	ImGui::Text("FPS: %.1f application average %.3f", ImGui::GetIO().Framerate);
 	ImGui::Text("App average %.3f ms/frame", 1000.0f / ImGui::GetIO().Framerate);
+	glm::vec3 camPos = this->cam->getPosition();
+	ImGui::Text("Cam Position: %.1f %.1f %.1f", camPos[0], camPos[1], camPos[2]);
 
 	if (ImGui::CollapsingHeader("Entities"))
 	{
 		std::vector<std::string> entityNames = this->mEntities->getAllEntityNames();
 
-		if (ImGui::TreeNode("Selection State: Single Selection"))
+		for (unsigned i = 0; i < entityNames.size(); i++)
 		{
-			static int selected = -1;
-			for (int n = 0; n < entityNames.size(); n++)
+			if (ImGui::TreeNode(entityNames[i].c_str(), "%s", entityNames[i].c_str()))
 			{
-				char buf[32];
-				sprintf(buf, "%03d: %s", n, entityNames[n].c_str());
-				if (ImGui::Selectable(buf, selected == n))
-				{
-					selected = n;
-					ImGui::PushID("foo");
-					this->ShowEntityMenuFile();
-					ImGui::PopID();
-				}
+				ImGui::InputFloat3("Position: ", &this->mEntities->getEntity(entityNames[i])->getPosition()[0], 1);
+				ImGui::TreePop();
+			
 			}
-			ImGui::TreePop();
 		}
-	
-		/*for (int i = 0; i < entityNames.size(); i++)
-		{
-			ImGui::Text("%03d: %s", i, entityNames[i].c_str());
-			ImGui::InputFloat3(entityNames[i].c_str(), &this->mEntities->getEntity(entityNames[i])->getPosition()[0], 1);
-		}*/
-		
-		// ##########################################
-		
 	}
 
-	ImGui::ShowDemoWindow();
-
+	//ImGui::ShowDemoWindow();
 
 	// IMGUI render
 	ImGui::Render();
 	ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
+}
+
+void GUI::setCamera(Camera* cam)
+{
+	this->cam = cam;
 }
 
 

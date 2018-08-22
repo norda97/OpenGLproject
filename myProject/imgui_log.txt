@@ -1,0 +1,279 @@
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #
+
+
+## Widgets #
+
+## Layout #
+
+## Popups & Modal windows #
+> Popups
+    When a popup is active, it inhibits interacting with windows that are behind the popup. Clicking outside the popup closes it.
+    Select.. <None>
+    Toggle..
+    Popup Menu..
+> Context menus
+    Value = 0.500 (<-- right-click here)
+    Button: Label1 (<-- right-click here)
+> Modals
+    Modal windows are like popups but the user cannot close them by clicking outside the window.
+    Delete..
+    Stacked modals..
+> Menus inside a regular window
+    Below we are testing adding menu items to a regular window. It's rather unusual but should work! 
+    --------------------------------
+    Menu item CTRL+M
+    Menu inside a regular window 
+    --------------------------------
+
+## Columns #
+
+## Filtering #
+
+## Inputs, Navigation & Focus #

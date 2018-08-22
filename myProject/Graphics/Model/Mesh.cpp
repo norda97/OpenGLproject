@@ -24,8 +24,19 @@ Mesh::~Mesh()
 
 void Mesh::render()
 {
+	this->texture.loadTexture(0);
 	glBindVertexArray(this->vao);
+
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(1);
+	glEnableVertexAttribArray(2);
+
 	glDrawArrays(GL_TRIANGLES, 0, this->vertices.size());
+
+	glDisableVertexAttribArray(0);
+	glDisableVertexAttribArray(1);
+	glDisableVertexAttribArray(2);
+
 	glBindVertexArray(0);
 }
 
@@ -59,6 +70,10 @@ void Mesh::loadGPU(const  GLuint & shaderID)
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->ebo);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indicies), &indicies[0], GL_STATIC_DRAW);
 
+	glDisableVertexAttribArray(0);
+	glDisableVertexAttribArray(1);
+	glDisableVertexAttribArray(2);
+
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
@@ -73,6 +88,11 @@ void Mesh::addVertex(vertexStruct vertex)
 void Mesh::setMaterial(const Material & mat)
 {
 	this->material = mat;
+}
+
+void Mesh::setTexture(const std::string & path, const bool & useMIPMAP)
+{
+	this->texture.setTexture(path, useMIPMAP);
 }
 
 void Mesh::updateMaterial()

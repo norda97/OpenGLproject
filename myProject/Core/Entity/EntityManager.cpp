@@ -36,7 +36,8 @@ bool EntityManager::addEntity(const std::string& entityName, const std::string& 
 
 	
 	if (this->entities.find(entityName) == this->entities.end()) 
-		this->entities.insert(std::make_pair(entityName, new Entity(this->modelMap[modelName])));
+		this->entities.insert(std::make_pair(entityName,
+			new Entity(this->modelMap[modelName])));
 	else 
 		foundName = true;
 

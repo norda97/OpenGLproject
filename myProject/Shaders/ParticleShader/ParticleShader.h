@@ -1,14 +1,13 @@
-#ifndef PHONG_SHADER_H
-#define PHONG_SHADER_H
+#ifndef PARTICLESHADER_H
+#define PARTICLESHADER_H
 
 #include "../Shader.h"
 
-
-class PhongShader : public Shader
+class ParticleShader : public Shader
 {
 public:
-	PhongShader();
-	~PhongShader();
+	ParticleShader();
+	~ParticleShader();
 
 	void updateUniforms(const glm::mat4& worldMatrix, const glm::mat4& projViewMatrix);
 };

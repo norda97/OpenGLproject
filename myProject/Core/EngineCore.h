@@ -4,7 +4,7 @@
 
 #include "Settings.h"
 //Glew has to be included before display!!
-#include "Display.h"
+
 
 //Temporary includes
 #include "..\Core\Entity\Entity.h"
@@ -13,6 +13,7 @@
 #include "..\Core\Entity\EntityManager.h"
 #include "Renderer\Renderer.h"
 #include "..\Utils\GUI.h"
+#include "Renderer\FrameBuffer.h"
 
 class EngineCore
 {
@@ -22,12 +23,10 @@ public:
 
 	void init();
 	void update(const double& dt);
+	void input(const double & dt);
 	void render();
-	void input();
 private:
 	void clean();
-
-	Display display;
 
 	//##### For FPS counter ######
 	unsigned fps;

@@ -14,7 +14,7 @@ Model * loadOBJ(const std::string & path)
 	std::map<std::string, Material> tempMaterial;
 	char mtlString[80];
 	
-	Mesh temp;
+	Mesh* temp = new Mesh();
 
 	bool hasNormals = false;
 	bool hasUVs = false;
@@ -63,9 +63,9 @@ Model * loadOBJ(const std::string & path)
 					vertex.uv[1] = 0.0f;
 				}
 
-				temp.addVertex(vertex);
+				temp->addVertex(vertex);
 			}
-			temp.setMaterial(tempMaterial[mtlString]);
+			temp->setMaterial(tempMaterial[mtlString]);
 			finalModel->addMesh(temp);
 			break; // EOF = End Of File. Quit the loop.
 		}
@@ -130,9 +130,9 @@ Model * loadOBJ(const std::string & path)
 						vertex.uv[1] = 0.0f;
 					}
 
-					temp.addVertex(vertex);
+					temp->addVertex(vertex);
 				}
-				temp.setMaterial(tempMaterial[mtlString]);
+				temp->setMaterial(tempMaterial[mtlString]);
 				finalModel->addMesh(temp);
 			}
 
