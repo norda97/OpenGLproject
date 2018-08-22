@@ -126,9 +126,10 @@
     <ClCompile Include="Core\Display.cpp" />
     <ClCompile Include="Core\EngineCore.cpp" />
     <ClCompile Include="Core\main.cpp" />
-    <ClCompile Include="Core\Entity\Entity.cpp" />
-    <ClCompile Include="Core\Entity\EntityManager.cpp" />
+    <ClCompile Include="Core\GameObject\Entity.cpp" />
+    <ClCompile Include="Core\GameObject\EntityManager.cpp" />
     <ClCompile Include="Core\Renderer\FrameBuffer.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Graphics\Textures\CubeMap.cpp" />
     <ClCompile Include="Graphics\Particles\ParticleEmitter.cpp" />
     <ClCompile Include="Graphics\Particles\Particle.cpp" />
@@ -157,9 +158,10 @@
     <ClInclude Include="Core\Display.h" />
     <ClInclude Include="Core\EngineCore.h" />
     <ClInclude Include="Core\Settings.h" />
-    <ClInclude Include="Core\Entity\Entity.h" />
-    <ClInclude Include="Core\Entity\EntityManager.h" />
+    <ClInclude Include="Core\GameObject\Entity.h" />
+    <ClInclude Include="Core\GameObject\EntityManager.h" />
     <ClInclude Include="Core\Renderer\FrameBuffer.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="Graphics\Textures\CubeMap.h" />
     <ClInclude Include="Graphics\Particles\ParticleEmitter.h" />
     <ClInclude Include="Graphics\Particles\Particle.h" />
